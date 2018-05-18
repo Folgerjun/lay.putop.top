@@ -1,9 +1,7 @@
-# **[putop.top](https://github.com/Folgerjun/putop.top "putop.top")**
+# **[putop.top](https://github.com/Folgerjun/putop.top# "putop.top")**
 <br>
 A minimalist website http://putop.top
 ----------
-## Contents 目录
-
 
 ## Preface 前言
 
