@@ -1,0 +1,61 @@
+<div th:fragment="admin_header">
+
+  <div class="layui-header">
+    <div class="layui-logo">域名后台管理</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="/">查看页面</a></li>
+      <li class="layui-nav-item"><a href="javascript:void(0)" onclick="showmi()">查看域名信息</a></li>
+      <li class="layui-nav-item"><a href="javascript:void(0)" onclick="showvedio()">查看视频信息</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">预留</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">预留1</a></dd>
+          <dd><a href="">预留2</a></dd>
+          <dd><a href="">预留3</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img th:src="@{/img/Avatar.jpg}" class="layui-nav-img" />
+         [[${session.username}]]
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">预留</a></dd>
+          <dd><a href="">预留</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">预留</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">预留</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">预留一</a></dd>
+            <dd><a href="javascript:;">预留二</a></dd>
+            <dd><a href="javascript:;">预留三</a></dd>
+            <dd><a href="">预留</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">预留</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">预留</a></dd>
+            <dd><a href="javascript:;">预留</a></dd>
+            <dd><a href="">预留</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">预留</a></li>
+        <li class="layui-nav-item"><a href="">预留</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>

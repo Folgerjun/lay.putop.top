@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry
+        location="F:\jar\mysql-connector-java-5.1.38.jar" />
+    <context id="context1">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://127.0.0.1:3306/mi_show" userId="root"
+            password="****" />
+        <javaModelGenerator targetPackage="top.putop.mi.db.model"
+            targetProject="mi_show" />
+        <sqlMapGenerator targetPackage="top.putop.mi.db.mapper"
+            targetProject="mi_show" />
+        <javaClientGenerator targetPackage="top.putop.mi.db.dao"
+            targetProject="mi_show" type="XMLMAPPER" />
+
+        <table schema="mi_show" tableName="vedio_message" enableCountByExample="false"
+            enableUpdateByExample="false" enableDeleteByExample="false"
+            enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
+
+    </context>
+</generatorConfiguration>

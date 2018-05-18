@@ -1,0 +1,31 @@
+<div th:fragment="admin_vedio">
+
+<div style="padding: 15px;">
+    <div>
+  搜索视频：
+  <div class="layui-inline">
+    <input class="layui-input" name="id" id="searchInput" autocomplete="on">
+  </div>
+  <button class="layui-btn" data-type="reload" id="searchVedio">搜索</button>
+  <button class="layui-btn layui-btn-normal" id="addVedio">新增</button>
+</div>
+    <table class="layui-table" lay-data="{cellMinWidth: 80, url:'/editVediopage', page:true, limit:15,limits:[15,20,25], id:'vedioTable'}" lay-filter="demo">
+  <thead>
+    <tr>
+      <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
+      <th lay-data="{field:'id', sort: true, fixed: true}">ID</th>
+      <th lay-data="{field:'vedioName'}">视频名称</th>
+      <th lay-data="{field:'vedioType', sort: true}">视频类型</th>
+      <th lay-data="{field:'vedioUrl'}">视频观看链接</th>
+      <th lay-data="{fixed: 'right', align:'center', toolbar: '#barDemo'}"></th>
+    </tr>
+  </thead>
+</table>
+    <script type="text/html" id="barDemo">
+  	<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+  	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+  	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+	</script>
+    </div>
+
+</div>

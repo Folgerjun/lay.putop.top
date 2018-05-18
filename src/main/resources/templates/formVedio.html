@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<title>表单</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../layui/css/layui.css" th:href="@{/layui/css/layui.css}" media="all">
+</head>
+<body>
+<br>
+<br>
+	<form action="" class="layui-form" id="form">
+		<div class="layui-form-item">
+    	<label class="layui-form-label">视频名称</label>
+    		<div class="layui-input-block">
+      			<input id="vedioName" th:value="${message} ? ${message.vedioName}" name="title" lay-verify="title" autocomplete="off" placeholder="请输入视频名称" class="layui-input" />
+    		</div>
+    	</div>
+    	<div class="layui-form-item">
+    	<label class="layui-form-label">视频类型</label>
+    		<div class="layui-input-block">
+      			<select name="interest" lay-filter="aihao" id="vedioType">
+        			<option value="">请选择</option>
+        			<option value="1" th:selected="${message} ? ${message.vedioType} == '1'">电影</option>
+        			<option value="2" th:selected="${message} ? ${message.vedioType} == '2'">电视剧</option>
+      			</select>
+    		</div>
+  		</div>
+    	<div class="layui-form-item">
+    	<label class="layui-form-label">视频链接</label>
+    		<div class="layui-input-block">
+      			<input id="vedioUrl" th:value="${message} ? ${message.vedioUrl}" name="title" lay-verify="title" autocomplete="off" placeholder="请输入视频地址" class="layui-input" />
+    		</div>
+  		</div>
+  		<button type="button" class="layui-btn" id="test5"><i class="layui-icon"></i>上传视频</button>
+	</form>
+</body>
+<script src="../layui/layui.js" th:src="@{/layui/layui.js}" charset="utf-8"></script>
+<script src="../jquery/jquery-3.3.1.min.js" th:src="@{/jquery/jquery-3.3.1.min.js}" charset="utf-8"></script>
+<script type="text/javascript" th:inline="javascript">
+/*<![CDATA[*/
+	
+	// layui正确使用应先定义
+	layui.use(['layer', 'form', 'element'], function(){
+  var layer = layui.layer
+  ,form = layui.form
+  ,element = layui.element;
+  
+});
+	var callbackdata = function () {
+		var vedioName = $("#vedioName").val();
+		var vedioType = $("#vedioType").val();
+		var vedioUrl = $("#vedioUrl").val();
+        var data = {
+            vedioName: vedioName,
+            vedioType: vedioType,
+            vedioUrl: vedioUrl
+        };
+        return data;
+    }
+	
+	upload.render({
+	    elem: '#test5'
+	    ,url: '/upload/'
+	    ,accept: 'video' //视频
+	    ,done: function(res){
+	      console.log(res)
+	    }
+	  });
+	
+	/*]]>*/
+</script>
+
+</html>

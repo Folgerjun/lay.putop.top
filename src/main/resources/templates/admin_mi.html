@@ -1,0 +1,32 @@
+<div th:fragment="admin_mi">
+
+<div style="padding: 15px;">
+    <div>
+  搜索域名：
+  <div class="layui-inline">
+    <input class="layui-input" name="id" id="searchInput" autocomplete="on">
+  </div>
+  <button class="layui-btn" data-type="reload" id="searchMi">搜索</button>
+  <button class="layui-btn layui-btn-normal" id="addMi">新增</button>
+</div>
+    <table class="layui-table" lay-data="{cellMinWidth: 80, url:'/editMipage', page:true, limit:15,limits:[15,20,25], id:'miTable'}" lay-filter="demo">
+  <thead>
+    <tr>
+      <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
+      <th lay-data="{field:'id', sort: true, fixed: true}">ID</th>
+      <th lay-data="{field:'miName'}">域名名称</th>
+      <th lay-data="{field:'miType', sort: true}">域名类型</th>
+      <th lay-data="{field:'miDes'}">域名描述</th>
+      <th lay-data="{field:'miUrl'}">域名购买链接</th>
+      <th lay-data="{fixed: 'right', align:'center', toolbar: '#barDemo'}"></th>
+    </tr>
+  </thead>
+</table>
+    <script type="text/html" id="barDemo">
+  	<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+  	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+  	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+	</script>
+    </div>
+
+</div>

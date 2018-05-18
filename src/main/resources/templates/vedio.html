@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no,width=device-width,height=device-height"/>
+  <link rel="shortcut icon" type="image/x-icon" th:href="@{/img/p.ico}" media="screen" />
+<title>[[${vedioName}]]</title>
+</head>
+<body>
+
+<div style="text-align: center;">
+<p style="font-size: 35px;">[[${vedioName}]]</p>
+<video style="margin-top: 10%;height: auto;width: auto;" th:src="@{/vedio/vedio/__${vedioUrl}__}" controls="controls"></video>
+</div>
+</body>
+</html>
