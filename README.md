@@ -6,7 +6,7 @@ A minimalist website http://lay.putop.top
 ## Preface 前言
 
 
-- 趁着这几天稍微比较空闲，本着实践中学习的态度就搭建了这个极其简约的网站 [http://lay.putop.top](http://47.96.88.132:8090/ "这是个啥破网站")
+- 趁着这几天稍微比较空闲，本着实践中学习的态度就搭建了这个极其简约的网站 [http://lay.putop.top](http://lay.putop.top/ "这是个啥破网站")
 
 - 鄙人常常会回味那些经典影片，致敬！所以就加了个H5的Video
 
