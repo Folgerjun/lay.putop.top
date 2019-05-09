@@ -58,9 +58,11 @@ public class MiShowController {
 
 		Integer beforeNum = (page - 1) * limit;
 
+		// 获取选择分页内容
 		List<MiMessage> miMessages = miShowService.getAllMess(miName, miType, beforeNum, limit);
 
-		int count = miShowService.selectCount();
+		// 获取总数
+		int count = miShowService.getAllMess(miName, miType, null, null).size();
 
 		Iterator<MiMessage> iterator = miMessages.iterator();
 		// 重组url链接
