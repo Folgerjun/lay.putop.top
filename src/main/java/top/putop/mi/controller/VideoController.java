@@ -74,7 +74,7 @@ public class VideoController {
 
 		List<VedioMessage> vedioMessages = vedioShowService.getAllMess(vedioName, vedioType, beforeNum, limit);
 
-		int count = vedioShowService.selectCount();
+		int count = vedioShowService.getAllMess(vedioName, vedioType, null, null).size();
 
 		Iterator<VedioMessage> iterator = vedioMessages.iterator();
 		// 重组url链接
